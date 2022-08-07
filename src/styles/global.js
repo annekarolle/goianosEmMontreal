@@ -77,6 +77,9 @@ export default createGlobalStyle`
   a:hover{
     filter: brightness(1.5);
   }
+
+
+  
 `;
 
 

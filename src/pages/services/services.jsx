@@ -3,7 +3,13 @@ import Flag from "../../assets/img/canadaFlag.jpg";
 import Headermain from "../../components/header";
 import Footermain from "../../components/footer";
 import Calculadora from "../../components/calculadora";
-const Services = () => {
+
+
+import { Link } from "react-router-dom";
+import BannerServico from "../../components/BannerServicos";
+
+
+const Services = ({servicos}) => {
   return (
     <>
       <Headermain />
@@ -12,102 +18,32 @@ const Services = () => {
         <div className="services">
           <div className="containerSobreInicio">
             <ul>
-              <li>
-                <div className="containerImagemLista">
-                  <img src={Flag} alt="Flag canada" />
-                </div>
-                <div className="containerTextoLista">
-                  <h3>Transfer Aeroporto</h3>
-                  <p>Transfer aeroporto / casa ou vice e versa;</p>
-                </div>
-              </li>
-              <li>
-                <div className="containerImagemLista">
-                  <img src={Flag} alt="Flag canada" />
-                </div>
-                <div className="containerTextoLista">
-                  <h3>Transfer Aeroporto</h3>
-                  <p>Transfer aeroporto / casa ou vice e versa;</p>
-                </div>
-              </li>
-              <li>
-                <div className="containerImagemLista">
-                  <img src={Flag} alt="Flag canada" />
-                </div>
-                <div className="containerTextoLista">
-                  <h3>Transfer Aeroporto</h3>
-                  <p>Transfer aeroporto / casa ou vice e versa;</p>
-                </div>
-              </li>
-              <li>
-                <div className="containerImagemLista">
-                  <img src={Flag} alt="Flag canada" />
-                </div>
-                <div className="containerTextoLista">
-                  <h3>Transfer Aeroporto</h3>
-                  <p>Transfer aeroporto / casa ou vice e versa;</p>
-                </div>
-              </li>
-              <li>
-                <div className="containerImagemLista">
-                  <img src={Flag} alt="Flag canada" />
-                </div>
-                <div className="containerTextoLista">
-                  <h3>Transfer Aeroporto</h3>
-                  <p>Transfer aeroporto / casa ou vice e versa;</p>
-                </div>
-              </li>
-              <li>
-                <div className="containerImagemLista">
-                  <img src={Flag} alt="Flag canada" />
-                </div>
-                <div className="containerTextoLista">
-                  <h3>Transfer Aeroporto</h3>
-                  <p>Transfer aeroporto / casa ou vice e versa;</p>
-                </div>
-              </li>
-              <li>
-                <div className="containerImagemLista">
-                  <img src={Flag} alt="Flag canada" />
-                </div>
-                <div className="containerTextoLista">
-                  <h3>Transfer Aeroporto</h3>
-                  <p>Transfer aeroporto / casa ou vice e versa;</p>
-                </div>
-              </li>
-              <li>
-                <div className="containerImagemLista">
-                  <img src={Flag} alt="Flag canada" />
-                </div>
-                <div className="containerTextoLista">
-                  <h3>Transfer Aeroporto</h3>
-                  <p>Transfer aeroporto / casa ou vice e versa;</p>
-                </div>
-              </li>
-              <li>
-                <div className="containerImagemLista">
-                  <img src={Flag} alt="Flag canada" />
-                </div>
-                <div className="containerTextoLista">
-                  <h3>Transfer Aeroporto</h3>
-                  <p>Transfer aeroporto / casa ou vice e versa;</p>
-                </div>
-              </li>
-
-
-
+              {
+                servicos.map((servico) => {
+                 
+                 return (
+                  <li key={servico.titulo}>
+                  <div className="containerImagemLista">                    
+                    <img src={Flag} alt="Flag canada" />
+                  </div>
+                  <Link to={`services/${servico.titulo}`}>
+                  <div className="containerTextoLista">
+                    <h3>{servico.titulo}</h3>                    
+                   <button className="btnSaibaMais">Saiba mais...</button>                   
+                  </div>
+                  </Link>
+                </li>
+                 )
+                })
+              }
+             
             </ul>
             <div className="containerCalculadora">
               <Calculadora />
             </div>
           </div>
-          <div className="bannerServiços">
-            <h3>Contrate nossos serviços, consulte nossa agenda</h3>
-            <a href="#">
-              <button>Ver Agenda</button>
-            </a>
+          <BannerServico/>
           </div>
-        </div>
       </Container>
       <Footermain />                       
     </>

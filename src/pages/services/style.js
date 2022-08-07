@@ -6,28 +6,27 @@ export const Container = styled.div`
   flex-direction: column; 
   width: 100%; 
   padding: 20px;
-  padding-bottom:20px;
   justify-content: space-around; 
-  margin: 0 auto;   
+  margin: 0 auto;  
+  height : 100%;
 
 .services{
   display: flex;
   flex-direction: column; 
   width: 100%; 
   margin: 0 auto;
-  justify-content: space-around;  
-  padding: 20px;
+  justify-content: space-around;    
   color: #831515;
   align-items: stretch;
+  height : 100%;
   }
 
   .containerSobreInicio{
+    max-width: 1000px;
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    height: 100%;
-    padding: 20px;
+    align-items: flex-start;   
   }
   h1{
     margin-bottom:15px;
@@ -40,20 +39,30 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start; 
+    max-width: 1000px;
     width: 100%;    
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
     overflow-x: scroll;
     max-height: 300px;
-    margin-bottom: 20px;      
+    margin-bottom: 20px;  
+    padding: 30px;
+  }
+
+  h3{
+    font-size: 20px;
   }
 
   li{
     display: flex; 
-    flex-direction: row;
+    flex-direction: column;
     background-color:white ;  
     border-radius: 8px;
+    max-width: 250px;
+    width: 100%;
+    box-shadow: rgb(0 0 0 / 28%) 5px 4px 8px 0px;
+    
   } 
  
 
@@ -96,24 +105,31 @@ export const Container = styled.div`
    
     }
 
-    .bannerServiços{
-        background-color: #831515;
+    .containerTextoLista{
+     color: #831515;
+    }
+    
+
+    .btnSaibaMais{
+        background-color: transparent;
         color: white;
         width: 100%;
-        display: flex;
-        flex-direction: row;
-        padding: 15px;
-        justify-content: center;
-        max-height: 90px;
-        height: 100%;
+        border: none;
+        padding: 5px;
+        border-radius: 4px;
+        color: #831515;
     }
 
     .bannerServiços button{
-        margin-left: 10px;
-        padding: 5px;
+       padding: 5px;
         background-color: #ff0404;
+        width: 100%;
         color: white;
         border: none;
+    }
+
+    .btnSaibaMais:hover{
+      transform: scale(1.03);
     }
 
     .bannerServiços button:hover{

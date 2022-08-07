@@ -4,6 +4,8 @@ import Services from "../pages/services/services";
 import Home from "../pages/home/home";
 import Partners from "../pages/partners/Partners"
 import About from "../pages/about/about";
+import DetailServices from "../components/detailsServices";
+import servicos from "../dataSources/servicos";
 
 const Routes = () =>{
 
@@ -16,7 +18,7 @@ const Routes = () =>{
       <About />
     </Route>
     <Route exact path="/services">
-      <Services />
+      <Services servicos={servicos}/>
     </Route>
     <Route  exact path="/partners">
       <Partners />
@@ -24,7 +26,11 @@ const Routes = () =>{
     <Route exact path="/contacts">
       <Contact  />
     </Route>
-   
+    <Route path="/services/:id">
+      <DetailServices servicos={servicos}/>
+    </Route>
+    
+
   </Switch>
  )
 
