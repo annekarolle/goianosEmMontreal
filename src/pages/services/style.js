@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+@media (min-width:320px){
   display: flex;
-  flex-direction: column;
-  max-width: 1110px;
-  width: 100%;
-  margin-top: 80px;
+  flex-direction: column; 
+  width: 100%; 
   padding: 20px;
   padding-bottom:20px;
   justify-content: space-around; 
@@ -16,8 +15,7 @@ export const Container = styled.div`
   flex-direction: column; 
   width: 100%; 
   margin: 0 auto;
-  justify-content: space-around;
-  margin-top: 50px;
+  justify-content: space-around;  
   padding: 20px;
   color: #831515;
   align-items: stretch;
@@ -29,6 +27,7 @@ export const Container = styled.div`
     flex-direction: row;
     align-items: flex-start;
     height: 100%;
+    padding: 20px;
   }
   h1{
     margin-bottom:15px;
@@ -39,21 +38,21 @@ export const Container = styled.div`
   ul{
     list-style: none;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 10px;
-    width: 100%;
-    height: 100%;
+    flex-direction: column;
+    align-items: flex-start; 
+    width: 100%;    
     flex-wrap: wrap;
-    justify-content: center
+    justify-content: center;
+    gap: 10px;
+    overflow-x: scroll;
+    max-height: 300px;
+    margin-bottom: 20px;      
   }
 
   li{
-    display: flex;
-    width: 200px;
-    flex-direction: column;
-    background-color:white ;
-    height: 250px;
+    display: flex; 
+    flex-direction: row;
+    background-color:white ;  
     border-radius: 8px;
   } 
  
@@ -120,7 +119,16 @@ export const Container = styled.div`
     .bannerServiços button:hover{
       transform: scale(1.03);
     }
- 
+
+    .containerCalculadora{
+      display: none;
+    }
+  }
+
+  @media (min-width:480px){
+
+  }
+
  
 
   

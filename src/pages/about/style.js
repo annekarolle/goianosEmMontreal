@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    display: flex;
+
+@media (min-width:320px){
+  display: flex;
   flex-direction: row;
   max-width: 1110px;
   width: 100%;
@@ -14,19 +16,18 @@ export const Container = styled.div`
 
   .sobre{
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   max-width: 1110px;
   width: 100%; 
   margin: 0 auto;
-  justify-content: space-around;
-  margin-top: 50px;
+  justify-content: space-around;  
   padding: 20px;
   color: #831515;
   align-items: stretch;
   }
 
   .containerSobreInicio{
-    width: 50%;
+    width:100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -62,6 +63,8 @@ export const Container = styled.div`
     width: 100%;
     
   }
+}
+    
 
 `
   

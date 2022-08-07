@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+@media (min-width:320px){
   display: flex;
-  flex-direction: row;
-  max-width: 1110px;
-  width: 100%;
-  margin-top: 80px;
+  flex-direction: column; 
+  width: 95%; 
   padding: 20px;
   padding-bottom:20px;
   justify-content: space-between;
@@ -16,10 +15,11 @@ export const Container = styled.div`
 
   
   .containerConteudoPrincipal{
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    align-items: center;
   }
 
   .containerImagem{
@@ -29,6 +29,7 @@ export const Container = styled.div`
 
   .containerImagem img{
     width: 100%;
+    display: none;
   }
   
 
@@ -62,6 +63,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    align-items: center;
   }
 
   li{
@@ -96,6 +98,8 @@ export const Container = styled.div`
     filter: brightness(1.3);
     transform: scale(1.03);
   }
+}
+  
   
   
 `;

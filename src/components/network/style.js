@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-export const SocialMedia = styled.div`   
+export const SocialMedia = styled.div`  
+@media (min-width:320px){ 
     color:  #831515;
     display: flex;
-    flex-direction: row;
-    max-width: 1110px;
-    width: 100%;
+    flex-direction: row;  
+    width: 80%;
     margin: 0 auto;
     
 
@@ -30,5 +30,5 @@ export const SocialMedia = styled.div`
         flex-direction: column;
         text-align: left;
     }
-
+}
 `
