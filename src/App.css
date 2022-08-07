@@ -1,38 +1,118 @@
+body{
+  display: flex;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;   
+  width:  100vw;
+  height: 100vh; 
+  justify-content: space-between
+ 
 }
+
+
+.App-header {     
+  display: flex;
+  background-color: #831515;
+  justify-content: center;
+  color: white; 
+  height: 80px; 
+  width: 100%; 
+  box-shadow: rgba(0, 0, 0, 0.285) 3px -3px 8px 3px;
+
+}
+
+.containerMenubar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;  
+  justify-content: space-between;
+  max-width: 1110px;
+  width: 100%;
+}
+
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.menubar{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+}
+.menubar ul{
+  list-style: none;
+  flex-direction: row;
+  display: flex;
+  width: 60%;
+  justify-content: space-evenly;
+}
+
+
+
+.footer{
+ background-color: rgb(41, 40, 40);
+ color: white;
+ display: flex;
+ width: 100%;
+}
+
+.containerContatos{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.containerContatos ul{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.containerContatos li{
+  display: flex; 
+  flex-direction: row;   
+ 
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  display: flex; 
+  flex-direction: row;
+}
+
+h6{
+  margin-left:5px;
+}
+
+.icon{
+  color: #cc2020;
+  font-size: 15px;
+}
+
+.copyRigths{
+  font-size: 8px;
+  margin-top: 5px;
+  font-weight: 100;
+}
+
+
+.logo{
+  width: 100%;
+}
+
+.logotext{
+  display: flex;
+  flex-direction: row;
 }
