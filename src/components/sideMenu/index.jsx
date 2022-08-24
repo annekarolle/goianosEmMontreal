@@ -20,8 +20,7 @@ const SideMenu = ({ setIsOpenModal }) => {
 
     document.addEventListener("mousedown", handleOutClick);
 
-    return () => {
-      console.log("testeeeeee");
+    return () => {     
       document.removeEventListener("mousedown", handleOutClick);
     };
   }, []);
