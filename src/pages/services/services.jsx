@@ -7,6 +7,7 @@ import Calculadora from "../../components/calculadora";
 
 import { Link } from "react-router-dom";
 import BannerServico from "../../components/BannerServicos";
+import {GrMore} from "react-icons/gr"
 
 
 const Services = ({servicos}) => {
@@ -29,7 +30,7 @@ const Services = ({servicos}) => {
                   <Link to={`services/${servico.titulo}`}>
                   <div className="containerTextoLista">
                     <h3>{servico.titulo}</h3>                    
-                   <button className="btnSaibaMais">Saiba mais...</button>                   
+                   <button className="btnSaibaMais"><GrMore/></button>                   
                   </div>
                   </Link>
                 </li>

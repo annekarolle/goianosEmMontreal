@@ -6,6 +6,9 @@ import { FiInstagram } from "react-icons/fi";
 import { ContainerMenuBar } from "./style";
 import {FcAbout} from "react-icons/fc"
 import {AiFillHome} from "react-icons/ai"
+import {RiContactsFill} from "react-icons/ri"
+import {MdBusinessCenter, MdPeople} from "react-icons/md"
+import {BsPersonCircle} from "react-icons/bs"
 
 const SideMenu = ({ setIsOpenModal }) => {
   const modalRef = useRef();
@@ -47,23 +50,23 @@ const SideMenu = ({ setIsOpenModal }) => {
             </li>
             <li>
               {" "}
-              <Link to="/about" className="linkMenus"><h2><AiFillHome/></h2> <h2>Sobre</h2>
+              <Link to="/about" className="linkMenus"><h2><BsPersonCircle/></h2> <h2>Sobre</h2>
                 </Link>
             </li>
             <li>
               {" "}
-              <Link to="/services" className="linkMenus"><h2><AiFillHome/></h2> <h2>Serviços</h2>
+              <Link to="/services" className="linkMenus"><h2><MdBusinessCenter/></h2> <h2>Serviços</h2>
                 </Link>
             </li>
             <li>
               {" "}
-              <Link to="/partners" className="linkMenus"><h2><AiFillHome/></h2> <h2>Parceiros</h2>
+              <Link to="/partners" className="linkMenus"><h2><MdPeople/></h2> <h2>Parceiros</h2>
                 </Link>
             </li>
             <li>
               {" "}
               <Link to="/contacts" className="linkMenus">
-              <h2><AiFillHome/></h2> <h2>Contatos</h2></Link>
+              <h2><RiContactsFill/></h2> <h2>Contatos</h2></Link>
             </li>
           </ul>
         </>
