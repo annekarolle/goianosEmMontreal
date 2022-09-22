@@ -6,7 +6,7 @@ const BannerServico = () =>{
  return (
   <>
     <ContainerBanner>
-    <a href="/"> 
+    <a href="#/"> 
     <h2><AiFillCalendar/></h2>
     <h3> Contrate nossos serviços,  consulte nossa agenda. </h3>
     </a>

@@ -1,10 +1,11 @@
 import {FaWhatsapp} from "react-icons/fa"
 import {FiInstagram} from "react-icons/fi"
+import { Footer } from "./style"
 
 
 const Footermain = () => {
     return (
-        <div className="footer">
+        <Footer>
         <div className="containerContatos">
           <h3>Contato</h3>
           <ul>
@@ -23,7 +24,7 @@ const Footermain = () => {
           </ul>
           <span className="copyRigths">© Copyright 2022. Todos os direitos reservados Goianos em Montreal</span>
         </div>
-      </div>
+      </Footer>
     )
 }
 

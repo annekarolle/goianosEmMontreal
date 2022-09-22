@@ -3,20 +3,13 @@ import { createGlobalStyle } from "styled-components";
 export default createGlobalStyle`
     :root {
     --color-background: #FFFFFF;
-    --color-primary: #64B447;
-    --color-primary-light: #DFEFD9;
-    --color-primary-dark: #78a468;
-    --color-primary-transparent: rgba(100,180,71, 0.2);
-    --color-text: #3D3D3D;
-    --color-text-in-primary: #FFFFFF;
-    --color-text-complement: #A3A3A2;
-    --color-text-light: #C9C9C9;
-    --color-red: #B4423E; 
-    --color-tertiary: #EDB12A;
-    --color-secondary: #464745;
-    --color-success: #7CC39C;
-    --color-warning: #FBEA85;
-    --color-error: #EA524F;
+    --color-branco: #FFFFFF;
+    --color-transparent: #ffffffd4;
+    --color-escuro:#571212;
+    --color-medio: #831515;
+    --color-gradiente: linear-gradient(90deg, rgba(131,21,21,1) 0%, rgba(255,63,63,1) 53%, rgba(106,0,0,1) 100%);
+
+  
     font-size: 60%;   
   }
 
@@ -32,6 +25,9 @@ export default createGlobalStyle`
     outline:0;
     box-sizing: border-box;
   }
+
+    
+
   body,html{
     width: 100vw;
     height: 100vh;
@@ -54,24 +50,27 @@ export default createGlobalStyle`
   button {
     cursor: pointer;
   }
+
   /* width */
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 4px;
+    height: 6px;
+    
   }
   /* Track */
   ::-webkit-scrollbar-track {
-    background: var(--color-text-light);
-    margin: 1rem;
+    background: #eaeaea;
+    margin: 1rem;   
     border-radius: 1.6rem;
   }
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: var(--color-primary-dark);
+    background: #b6b6b6;
     border-radius: 1.6rem;
   }
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-primary);
+    background: #a9a7a7;
   }
 
   a:hover{

@@ -96,4 +96,19 @@ h2{
 
 
 }
+
+@media (min-width:601px) and (max-width:1100px){
+  .containerMenubar{
+    display: none;
+  }
+  .hamburguerMenu{
+    display: none;
+  }
+  .hamburguerMenu button{
+    color: green;
+  }
+  .sideMenu{
+    background-color: green;
+  }
+}
 `

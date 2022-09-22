@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { FaCanadianMapleLeaf } from "react-icons/fa";
-import { GiHamburgerMenu } from "react-icons/gi";
+
 import { useState } from "react";
-import SideMenu from "../sideMenu";
+import imagem from "../../assets/img/goianos.png"
+import { ContainerMenuBar } from "./style";
+import Caroussel from "../caroussel/caroussel";
 const Headermain = () => {  
   const [isOpenModal, setIsOpenModal] = useState(false);
 
@@ -10,29 +12,18 @@ const Headermain = () => {
   return (
     <>
       <div className="App-header">
-        <div className="containerMenubar" >
-          <div className="hamburguerMenu">
-            <button onClick={() => setIsOpenModal(!isOpenModal)}>
-              {" "}
-              <GiHamburgerMenu />
-            </button>
-
-            {
-              isOpenModal && 
-              <SideMenu setIsOpenModal={setIsOpenModal}/>
-
-            }
-          </div>
-          <div className="logo">
-            <Link className="logotext" to="/">
+        <ContainerMenuBar >
+         <div className="navegador">
+         <div >
+            <Link to="/">
               <h1>
                 <FaCanadianMapleLeaf /> Goianos.Montreal
               </h1>
             </Link>
           </div>
 
-          <div className="menubar">
-            <ul className="navBar">
+          <div >
+            <ul className="menuNav">
               <li>
                 {" "}
                 <Link to="/">Home</Link>
@@ -55,9 +46,10 @@ const Headermain = () => {
               </li>
             </ul>
           </div>
-
-          
-        </div>
+         </div>
+    
+        </ContainerMenuBar>
+        
       </div>
     </>
   );

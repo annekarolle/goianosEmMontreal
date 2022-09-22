@@ -8,21 +8,21 @@ body{
   flex-direction: column;   
   width:  100vw;
   height: 100vh; 
-  justify-content: space-between
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+ 
  
 }
 
-
-@media (min-width:320px){
-.App-header {     
+.App-header {
   display: flex;
-  background-color: #831515;
-  justify-content: center;
-  color: white;  
-  width: 100%; 
-  box-shadow: rgba(0, 0, 0, 0.285) 3px -3px 8px 3px;
-
+  flex-direction: column;   
+  align-items: center;
+  width: 100%;
 }
+
+@media (min-width:120px){
 
 .containerMenubar{
   display: flex;
@@ -58,67 +58,6 @@ body{
 }
 
 
-
-.footer{
- background-color: rgb(41, 40, 40);
- color: white;
- display: flex;
- width: 100%;
- margin-top: 20px;
-}
-
-.containerContatos{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-  padding-bottom: 15px;
-}
-
-.containerContatos h3{
- margin-top: 10px;
- font-size: medium;
-}
-
-.containerContatos ul{
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  margin-top: 10px;
-  flex-direction: column;
-   align-items: center;
-}
-
-.containerContatos li{
-  display: flex; 
-  flex-direction: row;   
- 
-}
-
-a{
-  text-decoration: none;
-  color: white;
-  display: flex; 
-  flex-direction: row;
-}
-
-h6{
- margin-top: 10px;
-  font-size:medium;
-}
-
-.icon{
-  color: #cc2020;
-  font-size:medium;
-}
-
-.copyRigths{
-  font-size: 8px;
-  margin-top: 5px;
-  font-weight: 100;
-}
-
-
 .logo{
   width: 100%;
   display: flex;
@@ -130,85 +69,11 @@ h6{
   display: flex;
   flex-direction: row;
 }
+
+a{
+  text-decoration: none;
+  color: white;
+  display: flex; 
+  flex-direction: row;
 }
-
-
-
-
-@media (min-width:100px) and (max-width:600px){
-
-  .containerMenubar{
-    display: flex;
-    flex-direction: row;
-  }
-  .menubar{
-    display: none;
-    background-color: #61dafb;
-  }
-
-  .hamburguerMenu{
-    font-size: 25px;
-    margin: 10px;
-  }
-
-  .hamburguerMenu button{
-    background-color: transparent;
-    border: none;
-    font-size: 25px;
-    margin: 10px;
-    color: white;
-  }
-
-  .sideMenu{
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.5);
-    
-  }
-  .sideBar{
-    width: 80%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-color: #831515;
-    padding-left: 20px;
-    padding-top: 20%;
-  }
-
-  .Sidelogo{
-    display: flex;
-  }
-  .sideLogotext{
-    display: flex;
-    flex-direction: row;
-    font-size: 10px;
-    margin: 0;
-  }
-  .sideBar ul{
-    list-style: none;      
-    font-size: 30px; 
-    gap: 20px;  
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-  }
-
-  .sideMenu button{
-    color: white;
-    background-color: transparent;
-    border: none;
-    display: flex;
-    width: 100px;
-    justify-content: flex-end;
-    gap: 10px;
-    font-size: 15px;
-  }
-
-
 }

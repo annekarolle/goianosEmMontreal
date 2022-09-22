@@ -1,4 +1,5 @@
 import "./App.css";
+import AuthorizationProvider from "./context/AuthContex";
 import Routes from "./routes";
 import Global from "./styles/global";
 
@@ -6,14 +7,14 @@ import Global from "./styles/global";
 function App() { 
 
   return (
-    <>
-    <div className="App">     
-      
+   <AuthorizationProvider> 
+    <>     
+    <div className="App">       
        <Routes />
        <Global />
        </div>     
     </>
-   
+   </AuthorizationProvider>
   );
 }
 

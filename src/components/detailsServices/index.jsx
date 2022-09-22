@@ -1,55 +1,55 @@
-import { useParams } from "react-router-dom";
-import Footermain from "../footer";
-import Headermain from "../header";
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthorizationContext } from "../../context/AuthContex";
 import { Card, Container } from "./style";
 
-import { BsFillArrowLeftCircleFill } from "react-icons/bs";
-import BannerServico from "../BannerServicos";
+
+
 
 const DetailServices = ({ servicos }) => {
-  const param = useParams();
 
+  const {serviceId} = useContext(AuthorizationContext)
+  
   const servico = servicos.find((servico) => {
-    return servico.titulo === param.id;
+    return servico.titulo === serviceId;
   });
 
-  return (
-    <>
-      <Headermain />
-      <Container>
-        <div className="tituloServico">
-          <h1>Serviços</h1>
-          <Link to="/services">
-            {" "}
-            <button>
-              <BsFillArrowLeftCircleFill />
-              Voltar
-            </button>
-          </Link>
-        </div>
-        <Card>
-          <div className="DescricaoServico">
-            <h2>{servico.titulo}</h2>
-            <p>{servico.Descricao}</p>
-            <p>Como calcular o valor do serviço?</p>
+
+ console.log(servico)
+  return (    
+  <>   
+      
+      <Container>    
+        <Card>    
+          <div className="containerInfo">
+              <h2 className="titulo">{servico.titulo}</h2>
+              
+              <p><strong>Descrição do serviço:</strong>  {servico.Descricao} </p>
+          </div> 
+          <div className="valores">
+           
+            <ul>
+            {
+              servico.precos.map((item) => 
+              item.valor ?
+              <li> 
+                <h2>Como calcular o serviço?</h2>
+                <h3>Preço por {item.categoria}</h3>                
+                <h3>Valor por {item.unidade}: {item.valor} {item.moeda}</h3>
+                <h3>Quantidade minima {item.qtd_minima}: {item.unidade}</h3>
+              </li>
+              :
+              <li>
+                <h2>Serviço sem custo</h2>
+              </li>
+              )
+
+            }
+            </ul>
           </div>
-          <ul>
-            {servico.precos.map((item) => {
-              return (
-                <li>
-                  <p>
-                    {item.categoria} valor por {item.unidade} {item.moeda}{" "}
-                    {item.valor}
-                  </p>
-                </li>
-              );
-            })}
-          </ul>
+
         </Card>
-      </Container>
-      <BannerServico/>
-      <Footermain />
+      </Container>    
+          
     </>
   );
 };

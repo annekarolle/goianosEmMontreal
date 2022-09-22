@@ -1,89 +1,89 @@
 import styled from "styled-components";
 
 export const Container = styled.div`  
-@media (min-width:320px){ 
+color: var(--color-escuro);
+
+@media (min-width:120px){ 
  display: flex;
  flex-direction: column;
  width: 95%;
  margin: 0 auto;
-
- .tituloServico{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    color : #831515;
-    align-items: center;
- }
- .tituloServico button{
-    background-color: transparent;
-    color: #831515;
-    border: none;    
-    width: 100px;
-    border-radius: 4px;
-    display: flex;
-    gap: 10px;
-    justify-content: flex-end;
-  
- }
- 
-
+ align-items: center;
+ height: 20em;
 }
 
 `
 
 
 export const Card = styled.div`  
-@media (min-width:320px){ 
-    max-width: 250px;
-    width: 100%;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: rgb(0 0 0 / 28%) 5px 4px 8px 0px;    
+@media (min-width:120px){     
+    width:100%;       
     display: flex;
-    flex-direction: column;
-    padding: 10px;
-   
-    margin: 0 auto;     
-    margin-top: 25px;
+    flex-direction: column; 
+    align-items: center;  
+    overflow-y: auto;
+  
 
-    ul{
-        list-style: none;
-    }
-
-    .DescricaoServico p{
-    display: flex;
-    color: #831515;
-    font-size: 15px;
-    margin-top: 10px;
-    font-weight: 900;
-    text-align: left;
-    }
-
-    .DescricaoServico p +p{
-    display: flex;
-    color: #831515;
-    font-size: 18px;
-    margin-top: 10px;
-    font-weight: 900;
-    text-align: left;
-    }
-
-    .DescricaoServico h2{
-    display: flex;
-    justify-content: center;
-    color: white;
-    font-size:22px;
-    font-weight: bold;
-    background-color: #831515;
-    border-radius: 4px;
-    padding: 5px;
-    }
-
-    ul{
-        margin-top: 20px;
-    }
 }
 
 
+.containerInfo{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    margin-top: 1em;
+}
+
+.containerInfo p{
+    text-align: left;
+}
+.valores{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    margin-top: 1em;
+    
+}
+
+.valores ul{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    
+}
+
+.valores li{
+    display: flex;
+    align-items: flex-start;  
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1em;
+   
+}
+
+.valores h2{
+    font-size: medium;
+}
+.valores h3{
+    font-size: medium;
+    font-weight: 300;
+}
+
+
+.titulo{
+    background-color: var(--color-escuro);
+    color: white;
+    padding: 0em 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+strong{
+    font-weight: 800;
+}
 
 `

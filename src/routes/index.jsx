@@ -18,17 +18,14 @@ const Routes = () =>{
       <About />
     </Route>
     <Route exact path="/services">
-      <Services servicos={servicos}/>
+      <Services/>
     </Route>
     <Route  exact path="/partners">
       <Partners />
     </Route>
     <Route exact path="/contacts">
       <Contact  />
-    </Route>
-    <Route path="/services/:id">
-      <DetailServices servicos={servicos}/>
-    </Route>
+    </Route>  
     
 
   </Switch>

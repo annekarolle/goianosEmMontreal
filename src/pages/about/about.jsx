@@ -1,6 +1,10 @@
 import { Container } from "./style.js";
 
-import Flag from "../../assets/img/flagcanada.png"
+import Goianos from "../../assets/img/goianos.png"
+import Canada from "../../assets/img/Flag_of_Canada_(Pantone).svg.png"
+import goias from "../../assets/img/Bandeira_de_Goiânia.svg.png"
+import quebec from "../../assets/img/Flag_of_Quebec.svg.png"
+import brasil from "../../assets/img/image.png"
 import Headermain from "../../components/header/index.jsx";
 import Footermain from "../../components/footer/index.jsx";
 
@@ -8,10 +12,9 @@ const About = () => {
   return (
   <>
   <Headermain />
-    <Container>
-      <div className="sobre">
+    <Container>      
         <div className="containerSobreInicio">
-            <h1>Sobre nós</h1>
+            <h1 className="tituloabout">Sobre nós</h1>
             <ul>
             <li>
           <p>
@@ -33,12 +36,19 @@ const About = () => {
         </li>
         </ul>
       
-        </div>
-        <div className="containerFlag">
-        <img src={Flag} alt="bandeira canada"/>
-        </div>
+        {/* <div className="containerImagensbandeiras">
+        <img src={brasil} alt="" />
+        <img src={goias} alt="" />
+        <img src={quebec} alt="" />
+        <img src={Canada} alt="" />
+        </div> */}
+
+        </div>  
     
-      </div>
+        <div className="goianos">
+        <img src={Goianos} alt="Imagem dos administradores da pagina com a bandeira do Brasil e do Canada"/>
+        </div>
+
     </Container>
     <Footermain />
   </>

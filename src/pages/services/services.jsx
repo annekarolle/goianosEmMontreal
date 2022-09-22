@@ -1,52 +1,51 @@
-import { Container } from "./style";
-import Flag from "../../assets/img/canadaFlag.jpg";
-import Headermain from "../../components/header";
+import { Container, ImagemFundo, UlServices } from "./style";
+import servicos from "../../dataSources/servicos"
+import DetailServices from "../../components/detailsServices";
+import { useContext } from "react";
+import { AuthorizationContext } from "../../context/AuthContex";
 import Footermain from "../../components/footer";
-import Calculadora from "../../components/calculadora";
-
-
-import { Link } from "react-router-dom";
+import Headermain from "../../components/header";
 import BannerServico from "../../components/BannerServicos";
-import {GrMore} from "react-icons/gr"
 
 
-const Services = ({servicos}) => {
+
+const Services = () => { 
+  const  {isOpenDetail, setIsOpenDetail, setServiceId} = useContext(AuthorizationContext)
+
   return (
-    <>
-      <Headermain />
-      <Container>
-        <h1>Serviços</h1>
-        <div className="services">
-          <div className="containerSobreInicio">
-            <ul>
-              {
-                servicos.map((servico) => {
+    <> 
+    <Headermain />  
+    <ImagemFundo>
+      <Container>       
+        <div className="services">      
+            <UlServices>
+              {               
+                servicos.map((servico) => {             
                  
                  return (
-                  <li key={servico.titulo}>
-                  <div className="containerImagemLista">                    
-                    <img src={Flag} alt="Flag canada" />
-                  </div>
-                  <Link to={`services/${servico.titulo}`}>
-                  <div className="containerTextoLista">
-                    <h3>{servico.titulo}</h3>                    
-                   <button className="btnSaibaMais"><GrMore/></button>                   
-                  </div>
-                  </Link>
-                </li>
-                 )
+                   <li key={servico.titulo}> 
+                    <button onClick={() =>{                 
+                      setIsOpenDetail(true)  
+                      setServiceId(servico.titulo)             
+                    }} >{servico.titulo} 
+                  </button>
+                 </li>
+                 )                 
                 })
-              }
-             
-            </ul>
-            <div className="containerCalculadora">
-              <Calculadora />
-            </div>
-          </div>
-          <BannerServico/>
+              }             
+            </UlServices>          
+              
+              {
+                isOpenDetail ?
+                <DetailServices servicos={servicos}/>
+                :
+                <></>
+              } 
           </div>
       </Container>
-      <Footermain />                       
+      </ImagemFundo> 
+      <BannerServico/>
+      <Footermain />                 
     </>
   );
 };

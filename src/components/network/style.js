@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 export const SocialMedia = styled.div`  
-@media (min-width:320px){ 
+@media (min-width:120px){ 
     color: white;
     display: flex;
     flex-direction: row;  
     width: 80%;
     margin: 0 auto;
+    justify-content: center;
     
 
     .containerImgInsta{

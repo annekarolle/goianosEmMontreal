@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-
-@media (min-width:320px){
   display: flex;
   flex-direction: row;
   max-width: 1110px;
@@ -12,26 +10,27 @@ export const Container = styled.div`
   padding-bottom:20px;
   justify-content: space-around; 
   margin: 0 auto;  
-  
+  color: var(--color-escuro);
 
-  .sobre{
-  display: flex;
+@media (max-width:400px){
+  flex-wrap: wrap;
   flex-direction: column-reverse;
-  max-width: 1110px;
-  width: 100%; 
-  margin: 0 auto;
-  justify-content: space-around;  
-  padding: 20px;
-  color: #831515;
-  align-items: stretch;
-  }
+align-items: center;
+}
+  
 
   .containerSobreInicio{
     width:100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    height: 100%;
+    align-items: flex-start; 
+
+
+    .tituloabout{
+      background-color: var(--color-escuro);
+      color: var(--color-branco);
+      padding: 0em 1em;
+    }
   }
   h1{
     margin-bottom:15px;
@@ -54,16 +53,42 @@ export const Container = styled.div`
     
   }
 
-  .containerFlag {
-    width: 40%;
+
+
+  .goianos {
+    width:50%;
     object-fit: cover;
     
-  }
-  .containerFlag img{
-    width: 100%;
     
   }
-}
+
+  .goianos img{
+    width: 100%;
+    border-radius: 8px;
+    
+  }
+
+
+  .containerImagensbandeiras{
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 2em;  
+  }
+
+  .containerImagensbandeiras img{
+    width: 10%;
+  }
+
+  @media (max-width:400px){
+    .containerImagensbandeiras{
+      justify-content: center;
+    }
+
+    .containerSobreInicio{
+      flex-direction: column;
+    }
+  }
     
 
 `
