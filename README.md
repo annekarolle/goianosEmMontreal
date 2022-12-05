@@ -2,7 +2,7 @@
 
 Desenvolvimento de uma página de prestação de serviços, para recém chegados na cidade de Montreal. 
 
-### Technology Stack
+### Technology 
 
 <div style='display:flex; gap: 5px;'><br>
  <img align="center" alt="Html5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
